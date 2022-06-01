@@ -18,13 +18,13 @@
 Main
 ****************************/
 .sidebar{
-  width: 15vw;
+  width: 20vw;
   height: 85vh;
   background-color: #000;
 }
 
 .main-content{
-  width: 85vw;
+  width: 80vw;
   height: 85vh;
   background-color: var(--main-content);
   overflow-y: scroll;
@@ -56,6 +56,45 @@ Interno Sidebar
   line-height: 40px;
 }
 
+.playlist{
+  margin: 20px;
+  color: #626262;
+}
+
+.playlist h4{
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.playlist .add-playlist{
+  background-color: #626262;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.add-playlist span{
+  font-size: 30px;
+  color: #000;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.name-playlist{
+  height: 250px;
+  overflow-y: scroll;
+}
+
+.name-playlist li{
+  list-style-type: none;
+  line-height: 30px;
+}
+
+.name-playlist a{
+  text-decoration: none;
+  color: #626262;
+}
 
 /***************************
 Action  hover
@@ -64,7 +103,8 @@ Action  hover
   border-left: 3px solid var(--marker);
 }
 
-.img-icon:hover, .description:hover{
+.img-icon:hover, .description:hover,
+.name-playlist a:hover{
   filter: brightness(1);
   color: #fff;
 }
@@ -89,6 +129,10 @@ body{
   display: flex;
 }
 
+.align-items-center{
+  align-items: center;
+}
+
 main{
   width: 100vw;
   height: 85vh;
@@ -106,6 +150,18 @@ footer{
   margin-left: 20px;
   margin-right: 10px;
   filter: brightness(0.5);
+}
+
+.mb-50{
+  margin-bottom: 50px;
+}
+
+.mb-40{
+  margin-bottom: 40px;
+}
+
+.mb-30{
+  margin-bottom: 30px;
 }
 
 
@@ -133,6 +189,10 @@ MEDIA QUERY
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 10px;
+  }
+
+  .playlist{
+    visibility: hidden;
   }
 }
 
@@ -162,6 +222,10 @@ MEDIA QUERY
   .description{
     display: inline-block;
   }
+
+  .playlist{
+    visibility: visible;
+  }
 }
 
 @media screen and (min-width: 992px){
@@ -170,6 +234,6 @@ MEDIA QUERY
 
 @media screen and (min-width: 1200px){
   .sidebar{
-    width: 15vw;
+    width: 20vw;
   }
 }
