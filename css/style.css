@@ -31,12 +31,49 @@ Main
   overflow-x: hidden;
 }
 
+/***************************
+Interno Sidebar
+****************************/
+#logo{
+  margin: 20px;
+}
 
+#logo img{
+  width: 60%;
+  height: 60%;
+}
+
+.action li{
+  list-style-type: none;
+}
+
+.action a{
+  text-decoration: none;
+  color: #626262;
+}
+
+.action .description{
+  line-height: 40px;
+}
+
+
+/***************************
+Action  hover
+****************************/
+.action li a:hover{
+  border-left: 3px solid var(--marker);
+}
+
+.img-icon:hover, .description:hover{
+  filter: brightness(1);
+  color: #fff;
+}
 
 
 /* Utils */
 html{
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -63,17 +100,67 @@ footer{
   background-color: var(--footer);
 }
 
+.img-icon{
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 10px;
+  filter: brightness(0.5);
+}
+
 
 /***************************
 MEDIA QUERY
 ****************************/
 @media screen and (min-width: 576px){
-  
+  .sidebar{
+    text-align: center;
+  }
+
+  .logo-big{
+    display: none;
+  }
+
+  .description{
+    display: none;
+  }
+
+  .action a{
+    justify-content: center;
+  }
+
+  .img-icon{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 768px){
   .sidebar{
     width: 30vw;
+    text-align: left;
+  }
+
+  .logo-small{
+    display: none;
+  }
+
+  .logo-big{
+    display: block;
+  }
+
+  .action a{
+    justify-content: flex-start;
+  }
+
+  .img-icon{
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  .description{
+    display: inline-block;
   }
 }
 
