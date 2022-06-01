@@ -100,12 +100,12 @@ Interno Sidebar
 .download{
   color: #626262;
   margin: 0 20px;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .fa-arrow-down{
-  font-size: 13px;
-  border: 1px solid #626262;
+  font-size: 15px;
+  border: 2px solid #626262;
   padding: 5px;
   border-radius: 50%;
   object-fit: cover;
@@ -131,6 +131,34 @@ Interno Sidebar
 }
 
 /***************************
+Interno Main-content
+****************************/
+header{
+  width: 80vw;
+  height: 100px;
+  background-color: var(--main-header);
+  position: fixed;
+  z-index: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.upgrade{
+  margin-right: 20px;
+}
+
+.upgrade a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.upgrade h4{
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+/***************************
 Action  hover
 ****************************/
 .action li a:hover{
@@ -142,6 +170,18 @@ Action  hover
   filter: brightness(1);
   color: #fff;
 }
+
+.playlist .add-playlist:hover{
+  background-color: #fff;
+}
+
+.name-playlist li a:hover{
+  border-left: 3px solid var(--marker);
+}
+
+.fa-arrow-down:hover, .installer:hover{
+  color: #fff;
+} 
 
 
 /* Utils */
@@ -235,6 +275,7 @@ MEDIA QUERY
 
   .playlist{
     visibility: hidden;
+    margin-bottom: 250px;
   }
 
   .installer{
@@ -283,6 +324,7 @@ MEDIA QUERY
 
   .playlist{
     visibility: visible;
+    margin-bottom: 280px;
   }
 
   .installer{
@@ -301,14 +343,48 @@ MEDIA QUERY
     margin-right: 10px;
   }
 
+  .main-content{
+    width: 70vw;
+  }
+
+  header{
+    width: 70vw;
+  }
+
 }
 
 @media screen and (min-width: 992px){
-  
+  .playlist{
+    visibility: visible;
+    margin-bottom: 250px;
+  }
 }
 
 @media screen and (min-width: 1200px){
   .sidebar{
     width: 20vw;
   }
+
+  .main-content{
+    width: 80vw;
+  }
+
+  header{
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 1920px){
+  .sidebar{
+    width: 15vw;
+  }
+
+  .main-content{
+    width: 85vw;
+  }
+
+  header{
+    width: 85vw;
+  }
+  
 }
