@@ -279,7 +279,11 @@ MEDIA QUERY
 
   .playlist{
     visibility: hidden;
-    margin-bottom: 250px;
+  }
+
+  .id{
+    border-top: 0px;
+    margin: 0 20px;
   }
 
   .installer{
@@ -295,6 +299,7 @@ MEDIA QUERY
   }
 
   .profile{
+    margin-top: 0;
     margin-right: 0;
   }
 }
@@ -328,7 +333,11 @@ MEDIA QUERY
 
   .playlist{
     visibility: visible;
-    margin-bottom: 280px;
+  }
+
+  .id{
+    border-top: 1px solid #626262;
+    margin: 0 20px;
   }
 
   .installer{
@@ -344,6 +353,7 @@ MEDIA QUERY
   }
 
   .profile{
+    margin-top: 20px;
     margin-right: 10px;
   }
 
@@ -360,13 +370,20 @@ MEDIA QUERY
 @media screen and (min-width: 992px){
   .playlist{
     visibility: visible;
-    margin-bottom: 250px;
+  }
+
+  .name-playlist{
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 1200px){
   .sidebar{
     width: 20vw;
+  }
+
+  .name-playlist{
+    margin-bottom: 40px;
   }
 
   .main-content{
@@ -381,6 +398,10 @@ MEDIA QUERY
 @media screen and (min-width: 1900px){
   .sidebar{
     width: 15vw;
+  }
+
+  .name-playlist{
+    margin-bottom: 180px;
   }
 
   .main-content{
