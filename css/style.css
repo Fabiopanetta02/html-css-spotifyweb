@@ -144,7 +144,7 @@ header{
 }
 
 .upgrade{
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .upgrade a{
@@ -182,6 +182,10 @@ Action  hover
 .fa-arrow-down:hover, .installer:hover{
   color: #fff;
 } 
+
+.upgrade:hover{
+  transform: scale(1.1);
+}
 
 
 /* Utils */
@@ -374,7 +378,7 @@ MEDIA QUERY
   }
 }
 
-@media screen and (min-width: 1920px){
+@media screen and (min-width: 1900px){
   .sidebar{
     width: 15vw;
   }
