@@ -3,7 +3,7 @@
     --footer: #282828;
     --main-header: rgba(8,11,18,0.5);
     --marker: #ADFF2F;
-} */
+}
 
 /* reset */
 * {
@@ -14,6 +14,24 @@
 
 
 /* Generics */
+/***************************
+Main
+****************************/
+.sidebar{
+  width: 15vw;
+  height: 85vh;
+  background-color: #000;
+}
+
+.main-content{
+  width: 85vw;
+  height: 85vh;
+  background-color: var(--main-content);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
 
 
 /* Utils */
@@ -30,6 +48,21 @@ body{
   margin: 0 auto;
 }
 
+.flex{
+  display: flex;
+}
+
+main{
+  width: 100vw;
+  height: 85vh;
+}
+
+footer{
+  width: 100vw;
+  height: 15vh;
+  background-color: var(--footer);
+}
+
 
 /***************************
 MEDIA QUERY
@@ -39,9 +72,17 @@ MEDIA QUERY
 }
 
 @media screen and (min-width: 768px){
-  
+  .sidebar{
+    width: 30vw;
+  }
 }
 
 @media screen and (min-width: 992px){
   
+}
+
+@media screen and (min-width: 1200px){
+  .sidebar{
+    width: 15vw;
+  }
 }
