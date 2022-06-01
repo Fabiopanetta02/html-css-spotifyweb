@@ -82,18 +82,52 @@ Interno Sidebar
 }
 
 .name-playlist{
-  height: 250px;
-  overflow-y: scroll;
+  height: 245px;
+  overflow-y: overlay;
 }
 
 .name-playlist li{
   list-style-type: none;
   line-height: 30px;
+  font-size: 15px;
 }
 
 .name-playlist a{
   text-decoration: none;
   color: #626262;
+}
+
+.download{
+  color: #626262;
+  margin: 0 20px;
+  font-size: 13px;
+}
+
+.fa-arrow-down{
+  font-size: 13px;
+  border: 1px solid #626262;
+  padding: 5px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.id{
+  border-top: 1px solid #626262;
+  margin: 0 20px;
+}
+
+.profile{
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  margin-right: 10px;
+  background-color: #626262;
+  border-radius: 50%;
+}
+
+.id h4{
+  color: #fff;
+  margin-top: 20px;
 }
 
 /***************************
@@ -164,6 +198,14 @@ footer{
   margin-bottom: 30px;
 }
 
+.mb-20{
+  margin-bottom: 20px;
+}
+
+.mb-10{
+  margin-bottom: 10px;
+}
+
 
 /***************************
 MEDIA QUERY
@@ -193,6 +235,22 @@ MEDIA QUERY
 
   .playlist{
     visibility: hidden;
+  }
+
+  .installer{
+    display: none;
+  }
+
+  .id .flex{
+    justify-content: center;
+  }
+
+  .id h4{
+    display: none;
+  }
+
+  .profile{
+    margin-right: 0;
   }
 }
 
@@ -226,6 +284,23 @@ MEDIA QUERY
   .playlist{
     visibility: visible;
   }
+
+  .installer{
+    display: inline-block;
+  }
+
+  .id .flex{
+    justify-content: flex-start;
+  }
+
+  .id h4{
+    display: inline-block;
+  }
+
+  .profile{
+    margin-right: 10px;
+  }
+
 }
 
 @media screen and (min-width: 992px){
