@@ -213,6 +213,10 @@ div.info-album{
   border-radius: 50%;
 }
 
+.album-img-rounded{
+  border-radius: 50%;
+} 
+
 
 /***************************
 Action  hover
@@ -253,6 +257,10 @@ Action  hover
 
 .album:hover .player{
   visibility: visible;
+  cursor: pointer;
+}
+
+.album:hover{
   cursor: pointer;
 }
 
