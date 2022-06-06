@@ -18,17 +18,16 @@
 Main
 ****************************/
 .sidebar{
-  width: 20vw;
-  height: 85vh;
+  width: 220px;
+  flex-shrink: 0;
+  height: calc(100vh - 100px);
   background-color: #000;
 }
 
 .main-content{
-  width: 80vw;
-  height: 85vh;
+  flex-grow: 1;
   background-color: var(--main-content);
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 /***************************
@@ -104,7 +103,7 @@ Interno Sidebar
 }
 
 .fa-arrow-down{
-  font-size: 15px;
+  font-size: 12px;
   border: 2px solid #626262;
   padding: 5px;
   border-radius: 50%;
@@ -134,7 +133,7 @@ Interno Sidebar
 Interno Main-content
 ****************************/
 header{
-  width: 80vw;
+  width: calc(100vw - 220px);
   height: 100px;
   background-color: var(--main-header);
   position: fixed;
@@ -158,6 +157,63 @@ header{
   border-radius: 20px;
   padding: 10px 30px;
 }
+
+.sidebar-main-content ul{
+  list-style-type: none;
+}
+
+.sidebar-main-content ul li a{
+  text-decoration: none;
+  color: #626262;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.album{
+  position: relative;
+}
+
+.album-img{
+  height: 200px;
+  width: 200px;
+}
+
+.description-album{
+  text-align: center;
+}
+
+h4.mb-10{
+  width: 200px;
+}
+
+div.info-album{
+  color: #626262;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.player{
+  height: 200px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+.fa-play{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  padding: 15px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+
+
 /***************************
 Action  hover
 ****************************/
@@ -187,6 +243,18 @@ Action  hover
   transform: scale(1.1);
 }
 
+.sidebar-main-content ul li a:hover{
+  border-bottom: 3px solid var(--marker);
+}
+
+.sidebar-main-content a:hover{
+  color: #fff;
+}
+
+.album:hover .player{
+  visibility: visible;
+  cursor: pointer;
+}
 
 /* Utils */
 html{
@@ -199,7 +267,7 @@ body{
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1650px;
   margin: 0 auto;
 }
 
@@ -211,14 +279,13 @@ body{
   align-items: center;
 }
 
-main{
-  width: 100vw;
-  height: 85vh;
+.justify-content-center{
+  justify-content: center;
 }
 
 footer{
   width: 100vw;
-  height: 15vh;
+  height: 100px;
   background-color: var(--footer);
 }
 
@@ -230,6 +297,18 @@ footer{
   filter: brightness(0.5);
 }
 
+.sidebar-main-content{
+  padding-top: 120px;
+}
+
+.text-white{
+  color: #fff;
+}
+
+
+/*******************************
+MARGIN BOTTOM
+********************************/
 .mb-50{
   margin-bottom: 50px;
 }
@@ -256,7 +335,16 @@ MEDIA QUERY
 ****************************/
 @media screen and (min-width: 576px){
   .sidebar{
+    width: 80px;
     text-align: center;
+  }
+
+  .main-content{
+    height: calc(100vh - 100px);
+  }
+
+  header{
+    width: calc(100vw - 80px);
   }
 
   .logo-big{
@@ -302,12 +390,47 @@ MEDIA QUERY
     margin-top: 0;
     margin-right: 0;
   }
+
+  .sidebar-main-content ul{
+    flex-wrap: wrap;
+  }
+
+  .sidebar-main-content ul li{
+    margin-bottom: 20px;
+  }
+
+  .container{
+    max-width: 470px;
+  }
+
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  .column{
+    width: calc(100% / 2);
+    padding: 10px;
+  }
 }
 
 @media screen and (min-width: 768px){
   .sidebar{
-    width: 30vw;
+    width: 220px;
     text-align: left;
+  }
+
+  header{
+    width: calc(100vw - 220px);
+  }
+
+  .main-content{
+    width: calc(100vw - 220px);
+  }
+
+  .container{
+    max-width: 500px;
   }
 
   .logo-small{
@@ -356,18 +479,13 @@ MEDIA QUERY
     margin-top: 20px;
     margin-right: 10px;
   }
-
-  .main-content{
-    width: 70vw;
-  }
-
-  header{
-    width: 70vw;
-  }
-
 }
 
 @media screen and (min-width: 992px){
+  header{
+    width: calc(100vw - 220px);
+  }
+
   .playlist{
     visibility: visible;
   }
@@ -375,13 +493,40 @@ MEDIA QUERY
   .name-playlist{
     margin-bottom: 30px;
   }
+
+  .container{
+    max-width: 730px;
+  }
+
+  .row{
+    margin: 0 -18px;
+  }
+
+  .column{
+    width: auto;
+    padding: 18px;
+  }
+
+  .album-img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .player{
+    width: 150px;
+    height: 150px;
+  }
+
+  h4.mb-10{
+    width: 150px;
+  }
+
+  .description-album{
+    width: 150px;
+  }
 }
 
 @media screen and (min-width: 1200px){
-  .sidebar{
-    width: 20vw;
-  }
-
   .name-playlist{
     margin-bottom: 40px;
   }
@@ -391,25 +536,47 @@ MEDIA QUERY
   }
 
   header{
-    width: 80vw;
+    width: calc(100vw - 220px);
+  }
+
+  .container{
+    max-width: 940px;
   }
 }
 
 @media screen and (min-width: 1900px){
-  .sidebar{
-    width: 15vw;
-  }
-
   .name-playlist{
-    margin-bottom: 180px;
+    margin-bottom: 250px;
   }
 
-  .main-content{
-    width: 85vw;
+  .container{
+    max-width: 1650px;
   }
 
-  header{
-    width: 85vw;
+  .row{
+    margin: 0 -10px;
   }
-  
+
+  .column{
+    width: calc(100% / 6);
+    padding: 10px;
+  }
+
+  .album-img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .player{
+    width: 200px;
+    height: 200px;
+  }
+
+  h4.mb-10{
+    width: 200px;
+  }
+
+  .description-album{
+    width: 200px;
+  }
 }
