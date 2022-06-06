@@ -202,7 +202,7 @@ div.info-album{
   visibility: hidden;
 }
 
-.fa-play{
+.fa-play-player{
   position: relative;
   top: 50%;
   left: 50%;
@@ -217,6 +217,112 @@ div.info-album{
   border-radius: 50%;
 } 
 
+/***************************
+Footer
+****************************/
+.album-footer{
+  margin: 10px 20px;
+}
+
+.img-album-footer{
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+div.title-music{
+  height: 60px;
+  margin: 10px 0;
+  padding: 10px 0;
+  margin-right: 20px;
+}
+
+.info-album-footer{
+  color: #626262;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.badge{
+  line-height: 60px;
+  padding: 10px 0;
+}
+
+.badge .fa-heart{
+  margin-right: 10px;
+}
+
+.control-music{
+  color: #fff;
+  font-size: 15px;
+  display: block;
+}
+
+.fa-shuffle, .fa-forward-step, .fa-rotate-right{
+  margin-right: 15px;
+  line-height: 39px;
+}
+
+.fa-backward-step{
+  line-height: 39px;
+}
+
+.fa-backward-step, .fa-play{
+  margin-right: 20px;
+}
+
+.timeline{
+  display: inline-block;
+  background-color: #626262;
+  width: 500px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 20px;
+}
+
+.time{
+  background-color: #fff;
+  width: 30%;
+  height: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.pointer-time{
+  background-color: #fff;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.fa-play{
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.control-volume{
+  color: #fff;
+  font-size: 15px;
+}
+
+.fa-list, .fa-display, .fa-volume-high{
+  margin-right: 15px;
+}
+
+.percent-volume{
+  display: inline-block;
+  background-color: #626262;
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
 
 /***************************
 Action  hover
@@ -264,6 +370,29 @@ Action  hover
   cursor: pointer;
 }
 
+.info-album-footer:hover{
+  text-decoration: underline;
+  color: #fff;
+}
+
+.control-music:hover, 
+.control-volume:hover{
+  cursor: pointer;
+}
+
+.fa-play-footer:hover{
+  transform: scale(1.1);
+}
+
+.time:hover{
+  background-color: #ADFF2F;
+  cursor: pointer;
+}
+
+.time:hover .pointer-time{
+  visibility: visible;
+}
+
 /* Utils */
 html{
   overflow: hidden;
@@ -289,6 +418,10 @@ body{
 
 .justify-content-center{
   justify-content: center;
+}
+
+.justify-content-end{
+  justify-content: flex-end;
 }
 
 footer{
@@ -333,6 +466,10 @@ MARGIN BOTTOM
   margin-bottom: 20px;
 }
 
+.mb-15{
+  margin-bottom: 15px;
+}
+
 .mb-10{
   margin-bottom: 10px;
 }
@@ -375,6 +512,7 @@ MEDIA QUERY
 
   .playlist{
     visibility: hidden;
+    margin-bottom: 100px;
   }
 
   .id{
@@ -421,6 +559,30 @@ MEDIA QUERY
     width: calc(100% / 2);
     padding: 10px;
   }
+
+  .row-footer{
+    display: flex;
+    margin: 0 -10px;
+  }
+
+  .column-footer{
+    width: calc(100% / 3);
+    padding: 10px;
+  }
+
+  .badge{
+    line-height: 0;
+    padding: 23px 0;
+  }
+
+  .fa-heart{
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+
+  .album-footer{
+    margin-right: 0;
+  }
 }
 
 @media screen and (min-width: 768px){
@@ -464,6 +626,7 @@ MEDIA QUERY
 
   .playlist{
     visibility: visible;
+    margin-bottom: 70px;
   }
 
   .id{
@@ -486,6 +649,10 @@ MEDIA QUERY
   .profile{
     margin-top: 20px;
     margin-right: 10px;
+  }
+
+  .album-footer{
+    margin: 10px 20px;
   }
 }
 
@@ -532,6 +699,16 @@ MEDIA QUERY
   .description-album{
     width: 150px;
   }
+
+  .badge{
+    line-height: 60px;
+    margin-bottom: 0;
+    padding: 10px 0;
+  }
+
+  .fa-heart{
+    margin-right: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px){
@@ -553,6 +730,11 @@ MEDIA QUERY
 }
 
 @media screen and (min-width: 1900px){
+  .playlist{
+    visibility: visible;
+    margin-bottom: 200px;
+  }
+
   .name-playlist{
     margin-bottom: 250px;
   }
