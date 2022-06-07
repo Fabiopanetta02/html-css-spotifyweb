@@ -428,6 +428,8 @@ footer{
   width: 100vw;
   height: 100px;
   background-color: var(--footer);
+  position: fixed;
+  z-index: 2;
 }
 
 .img-icon{
@@ -716,10 +718,6 @@ MEDIA QUERY
     margin-bottom: 40px;
   }
 
-  .main-content{
-    width: 80vw;
-  }
-
   header{
     width: calc(100vw - 220px);
   }
@@ -729,7 +727,7 @@ MEDIA QUERY
   }
 }
 
-@media screen and (min-width: 1900px){
+@media screen and (min-width: 1700px){
   .playlist{
     visibility: visible;
     margin-bottom: 200px;
@@ -740,7 +738,7 @@ MEDIA QUERY
   }
 
   .container{
-    max-width: 1650px;
+    max-width: 1600px;
   }
 
   .row{
