@@ -99,15 +99,11 @@ Interno Sidebar
 .download{
   color: #626262;
   margin: 0 20px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
-.fa-arrow-down{
-  font-size: 12px;
-  border: 2px solid #626262;
-  padding: 5px;
-  border-radius: 50%;
-  object-fit: cover;
+.installer{
+  line-height: 18px;
 }
 
 .id{
@@ -167,7 +163,7 @@ header{
   color: #626262;
   font-weight: bold;
   font-size: 15px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .album{
@@ -208,9 +204,6 @@ div.info-album{
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
-  padding: 15px;
-  border: 5px solid #fff;
-  border-radius: 50%;
 }
 
 .album-img-rounded{
@@ -246,6 +239,7 @@ div.title-music{
 .badge{
   line-height: 60px;
   padding: 10px 0;
+  color: #626262;
 }
 
 .badge .fa-heart{
@@ -260,15 +254,19 @@ div.title-music{
 
 .fa-shuffle, .fa-forward-step, .fa-rotate-right{
   margin-right: 15px;
-  line-height: 39px;
+  line-height: 25px;
 }
 
 .fa-backward-step{
-  line-height: 39px;
+  line-height: 25px;
 }
 
-.fa-backward-step, .fa-play{
+.fa-backward-step, .fa-circle-play{
   margin-right: 20px;
+}
+
+.fa-play-footer{
+  font-size: 25px;
 }
 
 .timeline{
@@ -300,11 +298,6 @@ div.title-music{
   visibility: hidden;
 }
 
-.fa-play{
-  padding: 10px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-}
 
 .control-volume{
   color: #fff;
@@ -332,7 +325,8 @@ Action  hover
 }
 
 .img-icon:hover, .description:hover,
-.name-playlist a:hover{
+.name-playlist a:hover, 
+.fa-heart:hover, .fa-folder:hover{
   filter: brightness(1);
   color: #fff;
 }
@@ -345,7 +339,7 @@ Action  hover
   border-left: 3px solid var(--marker);
 }
 
-.fa-arrow-down:hover, .installer:hover{
+.download:hover{
   color: #fff;
 } 
 
@@ -361,14 +355,21 @@ Action  hover
   color: #fff;
 }
 
+
 .album:hover .player{
   visibility: visible;
   cursor: pointer;
+  transform: translateY(-10px) scale(1.05);
 }
 
 .album:hover{
   cursor: pointer;
 }
+
+.album:hover img{
+  transform: translateY(-10px) scale(1.05);
+}
+
 
 .info-album-footer:hover{
   text-decoration: underline;
@@ -381,7 +382,7 @@ Action  hover
 }
 
 .fa-play-footer:hover{
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .time:hover{
@@ -628,7 +629,7 @@ MEDIA QUERY
 
   .playlist{
     visibility: visible;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .id{
